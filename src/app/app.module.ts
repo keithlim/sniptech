@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainscreenComponent } from './components/mainscreen/mainscreen.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RedirectComponent,
+    MainscreenComponent
   ],
   imports: [
     BrowserModule,
