@@ -6,8 +6,8 @@ import { Observable, of } from 'rxjs';
 })
 export class UtilityService {
 
-  // public rootApi = "https://sniptech-be.herokuapp.com";
-  public rootApi = "http://localhost:3000";
+  public rootApi = "https://sniptech-be.herokuapp.com";
+  // public rootApi = "http://localhost:3000";
 
   constructor() { }
 
