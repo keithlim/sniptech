@@ -9,6 +9,8 @@ import { UrlService } from 'src/app/service/url/url.service';
 })
 export class RedirectComponent implements OnInit {
 
+  public showError: boolean = false;
+
   constructor(
     private route: ActivatedRoute,
     private urlService: UrlService,
@@ -19,10 +21,14 @@ export class RedirectComponent implements OnInit {
 
     this.urlService.getUrl(shortUrl).subscribe(
       rsp => {
+        if (rsp === undefined) {
+          this.showError = true;
+        }
         this.redirect(rsp);
       },
       err => {
         console.error(err);
+        this.showError = true;
       }
     );
   }
