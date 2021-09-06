@@ -1,0 +1,15 @@
+<img src="../assets/images/default.svg" alt="SnipTech Logo">
+
+<form (ngSubmit)="shortenUrl()" #urlForm="ngForm">
+  <div id="form-grid">
+    <input [pattern]="pattern" type="url" name="longUrl" [(ngModel)]="longUrl" required>
+    <button type="submit" [disabled]="!urlForm.form.valid">SNIP</button>
+  </div>
+</form>
+
+<div id="info-div" *ngIf="shortUrl !== undefined">
+  <div id="info-text">
+    Result: https://sniptech-be.herokuapp.com/{{shortUrl}}
+    <button (click)="copyToClipBoard()"><i class="far fa-copy"></i></button>
+  </div>
+</div>
