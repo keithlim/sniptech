@@ -8,23 +8,14 @@ img {
     display: block;
 }
 
-@keyframes floatUp {
-    from {
-        top: 40px;
-    }
-    to {
-        top: -100px;
-    }
-}
-
 #form-grid {
     animation: fadein 5s;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    column-gap: 5%;
+    grid-template-columns: 56%;
+    column-gap: 1%;
     margin-top: -24%;
     position: sticky;
-    width: 30%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -35,6 +26,49 @@ img {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media (min-width:768px) {
+    @keyframes floatUp {
+        from {
+            top: 40px;
+        }
+        to {
+            top: -100px;
+        }
+    }
+    #form-grid input {
+        width: 45%;
+        margin-left: 58%;
+    }
+    #form-grid button {
+        width: 18%;
+        margin-left: 8%;
+    }
+    #info-text {
+        height: 3%;
+        font-size: 15px;
+        margin: 10px 0px;
+        margin-right: 8%;
+        width: 25%;
+    }
+}
+
+@media (max-width:767px) {
+    #form-grid input {
+        width: 85%;
+        margin-left: 30%;
+    }
+    #form-grid button {
+        width: 33%;
+        margin-left: 35%;
+    }
+    #info-text {
+        margin-right: 14%;
+        height: 1rem;
+        width: 14rem;
+        font-size: xx-small;
     }
 }
 
@@ -55,12 +89,33 @@ img {
     border-radius: 2rem;
     border: none;
     cursor: pointer;
-    background: linear-gradient(to bottom right, #88DF95, #415c61);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #1a5522;
+    width: 12px;
+    height: 12px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #info-div {
     display: flex;
     justify-content: center;
+    font-family: "Comic Sans MS", "ChalkboardSE-Regular";
 }
 
 #info-text {
@@ -68,10 +123,8 @@ img {
     color: #4f8a10;
     background-color: #dff2bf;
     border: 1px solid;
-    margin: 10px 0px;
     padding: 15px 10px;
     position: absolute;
-    width: 28%;
     border-radius: 1rem;
 }
 

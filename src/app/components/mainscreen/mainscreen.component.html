@@ -2,8 +2,14 @@
 
 <form (ngSubmit)="shortenUrl()" #urlForm="ngForm">
     <div id="form-grid">
-        <input [pattern]="pattern" type="url" name="longUrl" [(ngModel)]="longUrl" required>
-        <button type="submit" [disabled]="!urlForm.form.valid">SNIP</button>
+        <input [pattern]="pattern" placeholder="https://" type="url" name="longUrl" [(ngModel)]="longUrl" required>
+        <button type="submit" [disabled]="!urlForm.form.valid" [ngStyle]="{
+                'background': !urlForm.form.valid ? 'rgba(255, 255, 255, 0.5)' : 'linear-gradient(to bottom right, #88DF95, #415c61)',
+                'color': !urlForm.form.valid ? '' : 'antiquewhite'
+            }">
+            <div *ngIf="!showSpinner">SNIP</div>
+            <div *ngIf="showSpinner" class="loader"></div>
+        </button>
     </div>
 </form>
 
