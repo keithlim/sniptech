@@ -1,27 +1,28 @@
-# Sniptech
+# SNIPTECH
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+A URL shortening service front-end in the form of an Angular web application.
 
-## Development server
+It's backend is available [here](https://github.com/keithlim/sniptech-be).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+SnipTech is currently hosted on the Heroku platform under a free plan, and can be accessed [here](https://sniptech.herokuapp.com/).
 
-## Code scaffolding
+The overall system is running a PEAN stack.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Features
+- returns a shortened url based on any valid url input.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Displays an error message upon supplying an invalid shortened url.
 
-## Running unit tests
+## Technology
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Application Architecture
+- [Angular] - a development platform for building mobile and desktop web applications using Typescript/JavaScript and other languages.
 
-## Running end-to-end tests
+### Notable Packages
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- [express] - to support Angular deployment to Heroku, used [here](https://github.com/keithlim/sniptech/blob/master/server.js).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[//]: #
+   [Angular]: <https://angular.io/>
+   [Express]: <https://www.npmjs.com/package/express>
