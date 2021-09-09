@@ -37,7 +37,7 @@ export class MainscreenComponent implements OnInit {
   }
 
   copyToClipBoard() {
-    navigator.clipboard.writeText(`https://sniptech.herokuapp.com/${this.shortUrl}`).then().catch(e => console.error(e));
+    navigator.clipboard.writeText(`${this.shortUrl}`).then().catch(e => console.error(e));
   }
 
 }
